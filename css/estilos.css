@@ -1,12 +1,13 @@
-@media screen and (max-width:1023px){
+@media screen and (max-width:1024px){
   .container{
-    padding: 0 .7em; /*Modificado segun diseño*/
+     /*Modificado segun diseño*/
+    padding: 0 .7em;
   }
   .hero{
     height: auto;
     position: relative;
     overflow: hidden;
-    padding: 3em;
+    padding: 2em;
   }
   .hero-image{
     position: absolute;
@@ -24,57 +25,89 @@
 }
 
 @media screen and (max-width: 767px){
-  .hero{
-    height: auto;
-    position: relative;
+  .burger-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
+    color: white;
+    font-size: 30px;
   }
-  .hero-image{
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  h2 {
+    font-size: 1.2em;
+    margin: .5em 0;
   }
+
   h1{
     font-size: 2em;
     z-index: 2;
   }
-
 
   .header{
     display: block;
     height: auto;
   }
   .header ol{
-    display: initial;
+    display: block;
   }
   .header ol li{
     height: 50px;
   }
-  .header ol li a{
+  .header  a{
     justify-content: center;
+    height: 40px;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-bottom: .5em;
+
   }
-  .header .container .logo {
+  .header  .logo {
     text-align: center;
   }
+
+  .menu {
+    position: fixed;
+    background: rgba(5, 111, 255, .9);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100%;
+    /* height: 100vh; */
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .menu.is-active{
+    left: 0vw;
+  }
+
   .project{
     display: block;
   }
-  .project .project-imageContainer{
+  .project-imageContainer{
     width: auto;
     text-align: center;
   }
-  .project .project-details{
+  .project-details{
     width: auto;
-    font-size: 16px;
+    /* font-size: 16px; */
   }
   .project-course, .project-date, .project-url{
     margin: .3em 0;
-    margin-bottom: .3em;
+    /* margin-bottom: .3em; */
   }
   .project-title{
     font-size: 1.5em;
+    margin-bottom: .3em;
   }
   .project-url{
     font-size: 1em;
@@ -103,7 +136,7 @@
 
 @media screen and (max-width: 480px){
   h1{
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
   .project .project-details{
     width: auto;
